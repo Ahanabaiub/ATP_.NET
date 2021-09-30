@@ -18,16 +18,36 @@ namespace Products_CRUD.Models.Table
 
         public void Add(Product p)
         {
-            string query = String.Format("Insert into products values ('{0}',{1},'{2}')", p.name, p.price,p.description);
+            string query = String.Format("Insert into products values ('{0}','{1}','{2}','{3}')", p.name, p.price, p.quantity, p.description);
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
             int r = cmd.ExecuteNonQuery();
+           
             conn.Close();
 
         }
+
         public Product Get(int id)
         {
-            return null;
+
+            string query = String.Format("select * from products where id = {0}",id);
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            Product p = new Product()
+            {
+                id = reader.GetInt32(reader.GetOrdinal("id")),
+                name = reader.GetString(reader.GetOrdinal("name")),
+                price = reader.GetString(reader.GetOrdinal("price")),
+                quantity = reader.GetString(reader.GetOrdinal("quantity")),
+                description = reader.GetString(reader.GetOrdinal("description"))
+            };
+
+            conn.Close();
+
+            return p;
         }
 
         public List<Product> GetAll()
@@ -47,8 +67,8 @@ namespace Products_CRUD.Models.Table
                 {
                     id = reader.GetInt32(reader.GetOrdinal("id")),
                     name = reader.GetString(reader.GetOrdinal("name")),
-                    price = reader.GetFloat(reader.GetOrdinal("price")),
-                    quantity = reader.GetInt32(reader.GetOrdinal("quantity")),
+                    price =reader.GetString(reader.GetOrdinal("price")),
+                    quantity = reader.GetString(reader.GetOrdinal("quantity")),
                     description  = reader.GetString(reader.GetOrdinal("description"))
                 };
 

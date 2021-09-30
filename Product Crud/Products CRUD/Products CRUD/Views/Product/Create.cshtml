@@ -1,7 +1,19 @@
-﻿
+﻿@model Products_CRUD.Models.Entity.Product
+
 @{
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
 
+<form action="/product/create" method="post">
+    Name: <input type="text" name="name" class="form-control">
+    @Html.ValidationMessageFor(m => m.name, "", new { @class = "text-danger" })
+    price: <input type="text" name="price" class="form-control">
+    @Html.ValidationMessageFor(m => m.price, "", new { @class = "text-danger" })
+    Quantity: <input type="text" name="quantity" class="form-control">
+    @Html.ValidationMessageFor(m => m.quantity, "", new { @class = "text-danger" })
+    Description: <input type="text" name="description" class="form-control">
+    @Html.ValidationMessageFor(m => m.description, "", new { @class = "text-danger" })
+    <input type="submit" value="Add" class="btn btn-primary">
+</form>

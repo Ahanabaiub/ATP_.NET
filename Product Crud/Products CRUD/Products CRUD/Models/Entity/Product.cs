@@ -9,8 +9,8 @@ namespace Products_CRUD.Models.Entity
     {
         public int id { get; set; }
         public string name { get; set; }
-        public float price { get; set; }
-        public int quantity {get; set; }
+        public string price { get; set; }
+        public string quantity {get; set; }
         public string description { get; set; }
 
     }
