@@ -77,3 +77,7 @@ E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\bin\Microsoft.Cod
 E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\obj\Debug\Products CRUD.csproj.CopyComplete
 E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\obj\Debug\Products CRUD.dll
 E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\obj\Debug\Products CRUD.pdb
+E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\bin\EntityFramework.dll
+E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\bin\EntityFramework.SqlServer.dll
+E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\bin\EntityFramework.xml
+E:\projects\.NET proj\Product Crud\Products CRUD\Products CRUD\bin\EntityFramework.SqlServer.xml
