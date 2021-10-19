@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Products_CRUD
+namespace Products_CRUD.Models
 {
     using System;
     using System.Data.Entity;
@@ -15,6 +15,8 @@ namespace Products_CRUD
     
     public partial class ProductdbEntities : DbContext
     {
+        internal object orders;
+
         public ProductdbEntities()
             : base("name=ProductdbEntities")
         {
@@ -25,9 +27,10 @@ namespace Products_CRUD
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<customer> customers { get; set; }
-        public virtual DbSet<orderDetail> orderDetails { get; set; }
-        public virtual DbSet<order> orders { get; set; }
-        public virtual DbSet<product> products { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

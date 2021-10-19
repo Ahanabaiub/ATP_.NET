@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Products_CRUD.Models;
+using Products_CRUD.Repo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Products_CRUD.Controllers
 {
@@ -12,6 +15,23 @@ namespace Products_CRUD.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Login(Customer c)
+        {
+            var cus = UserRepo.Authenticate(c.name, c.password);
+
+            if(cus!= null)
+            {
+                FormsAuthentication.SetAuthCookie(cus.id.ToString(), true);
+                return RedirectToAction("Index", "Product");
+            }
+
+
+            return RedirectToAction("Index");
+        }
+
+
 
         public ActionResult About()
         {

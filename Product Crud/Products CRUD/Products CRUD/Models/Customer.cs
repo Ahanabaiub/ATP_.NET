@@ -7,15 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Products_CRUD
+namespace Products_CRUD.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class customer
+    public partial class Customer
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Customer()
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
         public int id { get; set; }
-        public string phone { get; set; }
+        public string name { get; set; }
         public string password { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

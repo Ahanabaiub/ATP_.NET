@@ -7,19 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Products_CRUD
+namespace Products_CRUD.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class orderDetail
+    public partial class sysdiagram
     {
-        public int id { get; set; }
-        public Nullable<int> order_id { get; set; }
-        public Nullable<int> product_id { get; set; }
-        public Nullable<int> qty { get; set; }
-    
-        public virtual order order { get; set; }
-        public virtual product product { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

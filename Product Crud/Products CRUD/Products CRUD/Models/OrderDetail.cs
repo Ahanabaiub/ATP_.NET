@@ -7,18 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Products_CRUD
+namespace Products_CRUD.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class order
+    public partial class OrderDetail
     {
         public int id { get; set; }
-        public Nullable<int> customer_id { get; set; }
+        public Nullable<int> order_id { get; set; }
+        public Nullable<int> product_id { get; set; }
+        public Nullable<int> unitPrice { get; set; }
+        public Nullable<int> qty { get; set; }
     
-        public virtual orderDetail orderDetail { get; set; }
-        public virtual order orders1 { get; set; }
-        public virtual order order1 { get; set; }
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
