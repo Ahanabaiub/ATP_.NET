@@ -1,0 +1,78 @@
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\News Portal Project.dll.config
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\News Portal Project.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\News Portal Project.pdb
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\csc.exe
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\csc.exe.config
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\csc.rsp
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\csi.exe
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\csi.exe.config
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\csi.rsp
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.Managed.Core.targets
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.AppContext.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Collections.Immutable.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Console.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Globalization.Calendars.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.IO.Compression.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.IO.FileSystem.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Net.Http.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Net.Sockets.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Reflection.Metadata.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.ValueTuple.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Xml.XmlDocument.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Xml.XPath.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\vbc.exe
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\vbc.exe.config
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\vbc.rsp
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\VBCSCompiler.exe
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\roslyn\VBCSCompiler.exe.config
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\BEL.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\BLL.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\Newtonsoft.Json.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\System.Net.Http.Formatting.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\System.Web.Http.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\System.Web.Http.WebHost.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\AutoMapper.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\DAL.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\EntityFramework.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\BEL.pdb
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\BLL.pdb
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\Newtonsoft.Json.xml
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\System.Net.Http.Formatting.xml
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\System.Web.Http.xml
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\System.Web.Http.WebHost.xml
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\AutoMapper.xml
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\DAL.pdb
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\DAL.dll.config
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\bin\EntityFramework.xml
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\obj\Debug\News Portal Project.csproj.AssemblyReference.cache
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\obj\Debug\News Portal Project.csproj.CoreCompileInputs.cache
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\obj\Debug\News Portal Project.csproj.CopyComplete
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\obj\Debug\News Portal Project.dll
+E:\projects\.NET proj\Final\News Portal Project\News Portal Project\obj\Debug\News Portal Project.pdb
