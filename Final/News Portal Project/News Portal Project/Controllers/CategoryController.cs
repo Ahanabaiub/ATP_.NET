@@ -17,5 +17,19 @@ namespace News_Portal_Project.Controllers
         {
             return CategoryService.Get();
         }
+
+        [Route("api/Category/get/{id}")]
+        [HttpGet]
+        public CategoryModel Get(int id)
+        {
+            return CategoryService.Get(id);
+        }
+
+        [Route("api/Student/Create")]
+        [HttpPost]
+        public void Add(CategoryModel s)
+        {
+            CategoryService.Add(s);
+        }
     }
 }

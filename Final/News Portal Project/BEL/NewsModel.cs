@@ -13,5 +13,8 @@ namespace BEL
         public Nullable<int> category_id { get; set; }
         public Nullable<int> user_id { get; set; }
         public Nullable<System.DateTime> posted_at { get; set; }
+
+        public virtual CategoryModel Category { get; set; }
+        //public virtual ICollection<CommentModel> Comments { get; set; }
     }
 }
