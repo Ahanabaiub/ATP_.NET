@@ -1,20 +1,21 @@
 import React from "react";
-import  {useState}  from "react";
+import  {useState, useEffect}  from "react";
 import axios from "axios";
 import { Redirect, Route } from "react-router-dom";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
   
 
-const Login=()=>{
+const Login=(props)=>{
 
     //const [token,setToken] = useState("");
-    const [name,setName] = useState("");
+    const [email,setName] = useState("");
     const [password,setPass] = useState("");
 
     const[message,setMessage]=useState("");
 
     let history = useHistory();
+    let location = useLocation();
 
 
     const handelLogin=(e)=>{
@@ -23,10 +24,11 @@ const Login=()=>{
         //e.target.reset();
         let isValid = false;
 
-        var obj = {username:name, password:password};
+        var obj = {email:email, password:password};
         axios.post("/api/login",obj)
         .then(resp=>{
             var token = resp.data;
+            console.log(token);
             var user = {user_id: token.user_id,access_token:token.token};
             localStorage.setItem('user',JSON.stringify(user));
             console.log(localStorage.getItem('user'));
@@ -47,11 +49,15 @@ const Login=()=>{
         //     <Redirect to="/home" />
         // }
 
-        
-
-
-
     }
+
+   
+
+    useEffect(() => {
+        setMessage(location.state);
+
+     
+    }, []);
 
     return(
         
@@ -88,7 +94,7 @@ const Login=()=>{
                                     <form onSubmit={handelLogin}>
                                             <div className="row px-3"> <label className="mb-1">
                                                     <h6 className="mb-0 text-sm">Username</h6>
-                                                </label> <input className="mb-4 form-control" type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Enter a valid username" /> </div>
+                                                </label> <input className="mb-4 form-control" type="text" value={email} onChange={(e)=>setName(e.target.value)} placeholder="Enter a valid email" /> </div>
                                             <div className="row px-3"> <label className="mb-1">
                                                     <h6 className="mb-0 text-sm">Password</h6>
                                                 </label> <input type="password" value={password} onChange={(e)=>setPass(e.target.value)} className="mb-4 form-control" placeholder="Enter password" /> </div>

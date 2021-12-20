@@ -2,17 +2,28 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Orders() {
 
     const [orders, setOrders] = useState([]);
+    const history = useHistory();
     let count = 0;
 
     const getOrders = async () => {
-        let resp = await axios.get('api/orders/all');
-        setOrders(resp.data);
-        //console.log(resp.data);
-        //resp.data.map(e=>console.log(e));
+      
+        try{
+
+            let resp = await axios.get('api/orders/all');
+            setOrders(resp.data);
+           
+        }catch(err){
+            history.push({
+                pathname: '/',
+                state: err.response.data
+            });
+        }
+
     }
     const status = (s)=>{
         if(s==1){
@@ -29,7 +40,7 @@ function Orders() {
     useEffect(() => {
 
         getOrders();
-
+      
 
     }, []);
 

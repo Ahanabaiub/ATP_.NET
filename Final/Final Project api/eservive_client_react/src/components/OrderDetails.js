@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React from 'react';
-import { useParams,Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useParams, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useState, useEffect } from 'react/cjs/react.development';
 
 
 function OrderDetails() {
 
     const {id} = useParams();
+    const history = useHistory();
 
     let count = 0;
 
@@ -19,17 +20,31 @@ function OrderDetails() {
         //console.log(resp.data);
     }
 
-    const getEmployees =async ()=>{
-        let resp = await axios.get('api/employee/all');
-        setEmployees(resp.data);
-        console.log(resp.data);
+    const getEmployees =async ()=>{    
+
+        try{
+
+            let resp = await axios.get('api/employee/all');
+            setEmployees(resp.data);
+            console.log(resp.data);
+    
+           
+        }catch(err){
+            history.push({
+                pathname: '/',
+                state: err.response.data
+            });
+        }
     }
 
 
     useEffect(() => {
+       
         getOrderDetail();
         getEmployees();
-    }, []);
+       
+        
+    }, [history]);
 
     const checkEmployee=(e)=>{
         if(e){

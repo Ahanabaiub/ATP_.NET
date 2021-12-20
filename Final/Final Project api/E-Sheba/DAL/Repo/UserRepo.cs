@@ -30,6 +30,7 @@ namespace DAL.Repo
                 access_token.token = token;
                 access_token.user_id = u.id;
                 access_token.created_at = DateTime.Now;
+                db.Access_token.Add(access_token);
                 db.SaveChanges();
             }
             return access_token;
@@ -57,12 +58,20 @@ namespace DAL.Repo
 
         public bool IsAuthenticated(string token)
         {
-            throw new NotImplementedException();
+            var tkn = db.Access_token.Where(t => t.token == token).FirstOrDefault();
+            if (tkn.expired_at == null)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public void Logout(string token)
         {
-            throw new NotImplementedException();
+            var tkn =db.Access_token.Where(t => t.token == token).FirstOrDefault();
+            tkn.expired_at = DateTime.Now;
+            db.SaveChanges();
         }
     }
 }

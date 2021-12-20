@@ -8,6 +8,7 @@ import Orders from './Orders';
 import OrderDetails from './OrderDetails';
 import Reports from './Reports';
 import Login from './Login';
+import Logout from './Logout';
 
 axios.defaults.baseURL = "https://localhost:44390/";
 
@@ -39,6 +40,9 @@ const AppComp = () => {
                   <Navbar />
                   <Sidebar />
                   <Reports />
+               </Route>
+               <Route path="/logout">
+                 <Logout />
                </Route>
                <Redirect to="/home" />
             </Switch>

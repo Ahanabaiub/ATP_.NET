@@ -27,10 +27,10 @@ const Navbar = () => {
                         </ul>
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Name</a>
+                                {/* <a className="nav-link" aria-current="page" href="#">Name</a> */}
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Logout</a>
+                                <Link className="nav-link" to='/logout'>Logout</Link>
                             </li>
                             
                             

@@ -15,6 +15,6 @@ namespace BEL.DTO
         public int usertype { get; set; }
         public string password { get; set; }
 
-        public virtual ICollection<Access_tokenDto> Access_token { get; set; }
+       
     }
 }

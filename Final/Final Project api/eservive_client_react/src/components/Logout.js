@@ -2,31 +2,39 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
 
-const Logout =()=>{
+const Logout = () => {
 
-    let history = useHistory();
+  let history = useHistory();
 
-    if(localStorage.getItem('user')){
-
-
+  if (localStorage.getItem('user')) {
 
 
-        axios.get('/api/logout').then(resp=>{
-          localStorage.removeItem('user');
-          
-      })
-      .catch(err=>{
-          console.log(err);
+
+
+    axios.get('/api/logout').then(resp => {
+        localStorage.removeItem('user');
+        console.log(resp.data);
+
+        history.push({
+          pathname: '/',
+          state: resp.data
+        });
+
+    })
+      .catch(err => {
+        console.log(err);
       });
-      history.push('/login');
-      return <h1>Logout Successful.</h1>;
-      }
-      else{
-        return <h1>User does not exist!!!!</h1>;
-        //return history.push('/login');
-      }
 
-      
+
+
+    return <h1>Logout Successful.</h1>;
+  }
+  else {
+    return <h1>User does not exist!!!!</h1>;
+    //return history.push('/login');
+  }
+
+
 
 }
 

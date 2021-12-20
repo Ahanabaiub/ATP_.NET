@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
+   
     public class AuthService
     {
       
@@ -27,6 +28,16 @@ namespace BLL
             var u = mapper.Map<User>(user);
             var data = mapper.Map<Access_tokenDto>(da.Authenticate(u));
             return data;
+        }
+
+        public static bool IsAuthenticated(string token)
+        {
+            return DataAccessFactory.UserDataAcees().IsAuthenticated(token);
+        }
+
+        public static void Logout(string token)
+        {
+            DataAccessFactory.UserDataAcees().Logout(token);
         }
 
     }

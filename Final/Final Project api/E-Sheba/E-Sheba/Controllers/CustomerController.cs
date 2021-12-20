@@ -1,4 +1,5 @@
 ﻿using BLL;
+using E_Sheba.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ using System.Web.Http.Cors;
 namespace E_Sheba.Controllers
 {
     [EnableCors("*", "*", "*")]
+    [CustomAuth]
     public class CustomerController : ApiController
     {
         [Route("api/customers")]
