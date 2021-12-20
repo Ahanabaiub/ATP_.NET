@@ -42,11 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTO\Access_tokenDto.cs" />
     <Compile Include="DTO\CustomerDto.cs" />
     <Compile Include="DTO\EmployeeDto.cs" />
     <Compile Include="DTO\OrderDetailDto.cs" />
     <Compile Include="DTO\OrderDto.cs" />
     <Compile Include="DTO\ServiceDto.cs" />
+    <Compile Include="DTO\ServiceExpenceDto.cs" />
+    <Compile Include="DTO\ServiceOrderDto.cs" />
+    <Compile Include="DTO\UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

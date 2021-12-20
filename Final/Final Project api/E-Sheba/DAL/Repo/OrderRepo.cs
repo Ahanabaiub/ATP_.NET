@@ -20,6 +20,17 @@ namespace DAL.Repo
             throw new NotImplementedException();
         }
 
+        public void Cancel(int id)
+        {
+            var rs = Get(id);
+           // Console.WriteLine(".....########### "+rs.delevery_address);
+            rs.status = "3";
+
+
+            db.SaveChanges();
+
+        }
+
         public void Delete(int id)
         {
             throw new NotImplementedException();
@@ -37,7 +48,55 @@ namespace DAL.Repo
 
         public Order Get(int id)
         {
-            throw new NotImplementedException();
+            return db.Orders.Where(e => e.id == id).FirstOrDefault();
+        }
+
+        public List<Order> Search(string str)
+        {
+            var res = Get();
+            List<Order> orders = new List<Order>();
+
+            foreach (Order o in res)
+            {
+                if (o.order_place_date.ToShortDateString().Contains(str))
+                {
+                    orders.Add(o);
+                }
+            }
+
+            return orders;
+        }
+
+        public Dictionary<string, int> monthlyReport(string year)
+        {
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+            string[] months = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep",
+                "Oct","Nov","Dec" };
+            var orders = Get();
+
+            for(int i=0; i<12; i++)
+            {
+                string mn = (i + 1 <= 9) ? "0" + (i + 1) : ""+(i + 1);
+                string s = year+"/"+mn;
+                int count = 0;
+                foreach(var o in orders)
+                {
+
+                    var s2 = o.order_place_date.ToString("yyyy/MM/dd");
+
+
+                    if (s2.StartsWith(s))
+                    {
+                        count++;
+                    }
+
+                }
+
+                dict[months[i]] = count;
+                
+            }
+
+            return dict;
         }
     }
 }

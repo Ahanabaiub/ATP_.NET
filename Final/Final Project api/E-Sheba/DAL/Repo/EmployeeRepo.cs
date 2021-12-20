@@ -39,5 +39,10 @@ namespace DAL.Repo
         {
             throw new NotImplementedException();
         }
+
+        public List<Employee> GetByServiceId(int id)
+        {
+            return db.Employees.Where(e => e.service_id == id).ToList();
+        }
     }
 }

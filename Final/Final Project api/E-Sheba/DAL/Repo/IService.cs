@@ -9,5 +9,7 @@ namespace DAL.Repo
     public interface IService<T,ID> : ICrud<T,ID>
     {
 
+
+
     }
 }

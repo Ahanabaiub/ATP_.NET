@@ -13,5 +13,8 @@ namespace BEL.DTO
         public int service_id { get; set; }
         public double unit_price { get; set; }
         public int quantity { get; set; }
+
+        public virtual ServiceDto Service { get; set; }
+        public virtual EmployeeDto Employee { get; set; }
     }
 }

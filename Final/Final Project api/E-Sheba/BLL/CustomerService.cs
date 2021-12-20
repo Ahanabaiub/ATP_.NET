@@ -16,6 +16,12 @@ namespace BLL
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<Customer, CustomerDto>();
+                c.CreateMap<Order, OrderDto>();
+                
+                c.CreateMap<Order_Details, OrderDetailDto>();
+                c.CreateMap<Service, ServiceDto>();
+                c.CreateMap<User, UserDto>();
+                c.CreateMap<Employee, EmployeeDto>();
                 //c.CreateMap<Department, DepartmentModel>();
             });
             var mapper = new Mapper(config);

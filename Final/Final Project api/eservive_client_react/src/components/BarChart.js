@@ -54,6 +54,26 @@ const BarChart = (props)=>{
         ],
       };
 
+      // const data = {
+      //   labels,
+      //   datasets: [
+      //     {
+      //       label: props.label,
+      //       data: props.data,
+      //       backgroundColor: props.color,
+      //     },
+      //     {
+      //       label: props.label,
+      //       data: props.data,
+      //       backgroundColor: props.color,
+      //     }
+         
+      //   ],
+       
+      // };
+
+
+
     return(
         <>
             <Bar options={options} data={data} />

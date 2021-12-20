@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Access_token.cs">
+      <DependentUpon>ESM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Application.cs">
       <DependentUpon>ESM.tt</DependentUpon>
     </Compile>
@@ -86,13 +89,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repo\CustomerRepo.cs" />
     <Compile Include="Repo\EmployeeRepo.cs" />
+    <Compile Include="Repo\IAuth.cs" />
     <Compile Include="Repo\ICrud.cs" />
     <Compile Include="Repo\ICustomer.cs" />
     <Compile Include="Repo\IEmployee.cs" />
     <Compile Include="Repo\IOrder.cs" />
+    <Compile Include="Repo\IOrderDetails.cs" />
     <Compile Include="Repo\IService.cs" />
+    <Compile Include="Repo\IUser.cs" />
+    <Compile Include="Repo\OrderDetailsRepo.cs" />
     <Compile Include="Repo\OrderRepo.cs" />
     <Compile Include="Repo\ServiceRepo.cs" />
+    <Compile Include="Repo\UserRepo.cs" />
     <Compile Include="Service.cs">
       <DependentUpon>ESM.tt</DependentUpon>
     </Compile>

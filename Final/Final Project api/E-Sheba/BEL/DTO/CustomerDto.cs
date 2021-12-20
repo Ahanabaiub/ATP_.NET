@@ -11,5 +11,7 @@ namespace BEL.DTO
         public int id { get; set; }
         public int userid { get; set; }
         public string delevery_address { get; set; }
+
+        public virtual UserDto User { get; set; }
     }
 }

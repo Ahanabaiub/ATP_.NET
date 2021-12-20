@@ -14,5 +14,7 @@ namespace BEL.DTO
         public int service_id { get; set; }
         public string work_area { get; set; }
         public string work_status { get; set; }
+
+        public virtual UserDto User { get; set; }
     }
 }

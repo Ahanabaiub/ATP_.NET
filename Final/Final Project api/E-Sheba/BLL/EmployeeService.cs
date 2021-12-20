@@ -16,11 +16,26 @@ namespace BLL
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<Employee, EmployeeDto>();
+                c.CreateMap<User,UserDto>();
                 //c.CreateMap<Department, DepartmentModel>();
             });
             var mapper = new Mapper(config);
             var da = DataAccessFactory.EmployeeDataAcees();
             var data = mapper.Map<List<EmployeeDto>>(da.Get());
+            return data;
+        }
+
+        public static List<EmployeeDto> GetByServiceId(int id)
+        {
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Employee, EmployeeDto>();
+                c.CreateMap<User, UserDto>();
+                //c.CreateMap<Department, DepartmentModel>();
+            });
+            var mapper = new Mapper(config);
+            var da = DataAccessFactory.EmployeeDataAcees();
+            var data = mapper.Map<List<EmployeeDto>>(da.GetByServiceId(id));
             return data;
         }
 

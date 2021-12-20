@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Access_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="token" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="expired_at" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Access_token_Users" FromRole="Access_token" ToRole="Users" />
+  </EntityType>
   <EntityType Name="Application">
     <Key>
       <PropertyRef Name="id" />
@@ -102,10 +113,23 @@
     <Property Name="house" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
     <Property Name="road" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
     <Property Name="additional_info" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Access_token" Relationship="Self.FK_Access_token_Users" FromRole="Users" ToRole="Access_token" />
     <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Users" FromRole="Users" ToRole="Customers" />
     <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Users" FromRole="Users" ToRole="Employees" />
     <NavigationProperty Name="Managers" Relationship="Self.FK_Managers_Users" FromRole="Users" ToRole="Managers" />
   </EntityType>
+  <Association Name="FK_Access_token_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Access_token" Type="Self.Access_token" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Access_token">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Applications_Employees">
     <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
     <End Role="Applications" Type="Self.Application" Multiplicity="*" />
@@ -215,6 +239,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Access_token" EntityType="Self.Access_token" />
     <EntitySet Name="Applications" EntityType="Self.Application" />
     <EntitySet Name="Customers" EntityType="Self.Customer" />
     <EntitySet Name="Employees" EntityType="Self.Employee" />
@@ -223,6 +248,10 @@
     <EntitySet Name="Orders" EntityType="Self.Order" />
     <EntitySet Name="Services" EntityType="Self.Service" />
     <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Access_token_Users" Association="Self.FK_Access_token_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Access_token" EntitySet="Access_token" />
+    </AssociationSet>
     <AssociationSet Name="FK_Applications_Employees" Association="Self.FK_Applications_Employees">
       <End Role="Employees" EntitySet="Employees" />
       <End Role="Applications" EntitySet="Applications" />

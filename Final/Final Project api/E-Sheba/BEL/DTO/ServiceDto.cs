@@ -14,5 +14,7 @@ namespace BEL.DTO
         public double price { get; set; }
         public string status { get; set; }
         public string type { get; set; }
+
+      
     }
 }

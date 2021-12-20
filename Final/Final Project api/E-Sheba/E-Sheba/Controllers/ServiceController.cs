@@ -27,5 +27,27 @@ namespace E_Sheba.Controllers
             return Request.CreateResponse(HttpStatusCode.OK,
                 ServicesService.ServiceCount().ToString());
         }
+
+        [Route("api/service/service-order-data")]
+        [HttpGet]
+        public HttpResponseMessage GetOrderServiceData()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, ServicesService.ServiceWiseOrder());
+        }
+
+        [Route("api/service/service-employee-data")]
+        [HttpGet]
+        public HttpResponseMessage GetEmployeeServiceData()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, ServicesService.ServiceWiseWorker());
+        }
+
+
+        [Route("api/service/service-expence-data")]
+        [HttpGet]
+        public HttpResponseMessage GetServiceExpenceData()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, ServicesService.GetServiceExpence());
+        }
     }
 }

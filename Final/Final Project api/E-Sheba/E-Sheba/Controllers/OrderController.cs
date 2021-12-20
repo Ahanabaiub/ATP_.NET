@@ -25,5 +25,49 @@ namespace E_Sheba.Controllers
         {
             return Request.CreateResponse(HttpStatusCode.OK, OrderService.OrderCount());
         }
+
+        [Route("api/orders/order-service-data")]
+        [HttpGet]
+        public HttpResponseMessage GetOrderServiceData()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, OrderService.OrderCount());
+        }
+
+        [Route("api/orders/order-detail/{id}")]
+        [HttpGet]
+        public HttpResponseMessage GetOrderServiceData(int id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, 
+                OrderDetailsService.GetOrderDetailsByOrderId(id));
+        }
+
+
+        [Route("api/order-cancell/{id}")]
+        [HttpGet]
+        public HttpResponseMessage OrderCancel(int id)
+        {
+            OrderDetailsService.CancelOrder(id);
+            return Request.CreateResponse(HttpStatusCode.OK,"");
+        }
+
+
+        [Route("api/order/search/{q}")]
+        [HttpGet]
+        public HttpResponseMessage OrderCancel(string q)
+        {
+           
+            return Request.CreateResponse(HttpStatusCode.OK, OrderService.Search(q));
+        }
+
+        [Route("api/order/monthly/{year}")]
+        [HttpGet]
+        public HttpResponseMessage MnReport(string year)
+        {
+
+            return Request.CreateResponse(HttpStatusCode.OK, 
+                OrderService.monthlyReport(year));
+        }
+
+
     }
 }

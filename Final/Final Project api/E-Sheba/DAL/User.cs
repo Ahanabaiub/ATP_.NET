@@ -16,6 +16,7 @@ namespace DAL
     {
         public User()
         {
+            this.Access_token = new HashSet<Access_token>();
             this.Customers = new HashSet<Customer>();
             this.Employees = new HashSet<Employee>();
             this.Managers = new HashSet<Manager>();
@@ -33,6 +34,7 @@ namespace DAL
         public string road { get; set; }
         public string additional_info { get; set; }
     
+        public virtual ICollection<Access_token> Access_token { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
         public virtual ICollection<Manager> Managers { get; set; }

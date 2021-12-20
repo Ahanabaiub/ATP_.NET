@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 
@@ -24,12 +25,23 @@ const Sidebar = () => {
                         </div>
                         <hr className="dropdown-divider" />
                         <div className='mt-4 p-3'>
-                            <div className='d-flex flex-column'>
-                                <div className="p-2 side-menu-item">Customer</div>
-                                <div className="p-2 side-menu-item">Delivery Man</div>
-                                <div className="p-2 side-menu-item">Services</div>
-                                <div className="p-2 side-menu-item">ReportsName</div>
-                                
+                            <div className='d-flex flex-column '>
+                                <div className="nav-item">
+                                    <Link to="/" className='nav-link text-white'>Customer</Link>
+                                </div>
+                                <div className="nav-item">
+                                    <Link to="/" className='nav-link text-white'>Employee</Link>
+                                </div>
+                                <div className="nav-item">
+                                    <Link to="/" className='nav-link text-white'>Services</Link>
+                                </div>
+                                <div className="nav-item">
+                                    <Link to="/orders" className='nav-link text-white'>Orders</Link>
+                                </div>
+                                <div className="nav-item">
+                                    <Link to="/reports" className='nav-link text-white'>Reports</Link>
+                                </div>
+                               
                             </div>
                         </div>
                     </div>

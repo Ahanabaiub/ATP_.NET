@@ -34,5 +34,16 @@ namespace DAL
         {
             return new ServiceRepo(db);
         }
+
+        public static IOrderDetails<Order_Details, int> OrderDetailsDataAcees()
+        {
+            return new OrderDetailsRepo(db);
+        }
+        public static IAuth UserDataAcees()
+        {
+            return new UserRepo(db);
+        }
+
+
     }
 }

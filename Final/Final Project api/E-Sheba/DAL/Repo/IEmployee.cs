@@ -8,6 +8,6 @@ namespace DAL.Repo
 {
     public interface IEmployee<T,ID> : ICrud<T,ID>
     {
-
+        List<T> GetByServiceId(ID id);
     }
 }

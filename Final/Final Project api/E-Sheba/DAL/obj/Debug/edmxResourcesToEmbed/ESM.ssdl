@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Access_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="token" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="created_at" Type="datetime" Nullable="false" />
+    <Property Name="expired_at" Type="datetime" />
+  </EntityType>
   <EntityType Name="Applications">
     <Key>
       <PropertyRef Name="id" />
@@ -88,6 +98,18 @@
     <Property Name="road" Type="nchar" MaxLength="100" />
     <Property Name="additional_info" Type="nchar" MaxLength="100" />
   </EntityType>
+  <Association Name="FK_Access_token_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Access_token" Type="Self.Access_token" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Access_token">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Applications_Employees">
     <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
     <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
@@ -197,6 +219,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Access_token" EntityType="Self.Access_token" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Applications" EntityType="Self.Applications" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
@@ -205,6 +228,10 @@
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Access_token_Users" Association="Self.FK_Access_token_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Access_token" EntitySet="Access_token" />
+    </AssociationSet>
     <AssociationSet Name="FK_Applications_Employees" Association="Self.FK_Applications_Employees">
       <End Role="Employees" EntitySet="Employees" />
       <End Role="Applications" EntitySet="Applications" />
